@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <manifest>
-  <remote name="openembedded" fetch="git://github.com/openembedded/;protocol=https" />
-  <remote name="riscv" fetch="git://github.com/riscv/;protocol=https" />
-  <remote name="sifive" fetch="git://github.com/sifive/;protocol=https" />
+  <remote name="openembedded" fetch="git://github.com/openembedded/" protocol="https" />
+  <remote name="riscv" fetch="git://github.com/riscv/" protocol="https" />
+  <remote name="sifive" fetch="git://github.com/sifive/" protocol="https" />
   <default remote="openembedded" revision="master" />
 
   <project name="meta-sifive" remote="sifive" path="meta-sifive" revision="master" />
