@@ -73,7 +73,7 @@ MACHINE ?= "${MACHINE}"
 #IMAGE_FSTYPES_DEBUGFS = "tar.gz"
 #EXTRA_IMAGE_FEATURES_append = " ssh-server-dropbear"
 
-HOSTTOOLS += " python"
+HOSTTOOLS += " python opam ocaml bc"
 
 EXTRA_IMAGE_FEATURES_append = " package-management"
 PACKAGECONFIG_append_pn-qemu-native = " sdl"
