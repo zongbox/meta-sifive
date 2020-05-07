@@ -14,9 +14,14 @@ SRC_URI[md5sum] = "62ec3c3a6809b6c3cf7f73e9c6f37faf"
 UPSTREAM_CHECK_URI ?= "http://kernel.ubuntu.com/~cking/tarballs/${BPN}/"
 UPSTREAM_CHECK_REGEX ?= "(?P<pver>\d+(\.\d+)+)\.tar"
 
+LINUX_TEST_DIR = "linux_test"
+TARGET_TEST_DIR = "${LINUX_TEST_DIR}/${PN}"
+
 CFLAGS += "-Wall -Wextra -DVERSION='"$(VERSION)"'"
 
 do_install_append() {
-    install -d ${D}${bindir}
-    install -m 755 ${S}/stress-ng ${D}${bindir}/stress-ng
+    install -d ${D}/${TARGET_TEST_DIR}
+    install -m 755 ${S}/stress-ng ${D}/${TARGET_TEST_DIR}
 }
+
+FILES_${PN} += " ${TARGET_TEST_DIR}"
