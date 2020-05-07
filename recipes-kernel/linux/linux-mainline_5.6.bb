@@ -1,12 +1,10 @@
 require recipes-kernel/linux/linux-mainline-common.inc
 
-LINUX_VERSION ?= "5.6.x"
+LINUX_VERSION ?= "5.6"
 KERNEL_VERSION_SANITY_SKIP="1"
 
-BRANCH = "linux-5.6.y"
-SRCREV = "v5.6.2"
 SRC_URI = " \
-    git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git;branch=${BRANCH} \
+    git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git;tag=v5.6 \
 "
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
