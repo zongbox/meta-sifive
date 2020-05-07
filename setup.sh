@@ -75,6 +75,8 @@ MACHINE ?= "${MACHINE}"
 
 HOSTTOOLS += " python opam ocaml bc"
 
+IMAGE_INSTALL_append = " geekbench5 lmbench stress-ng testfloat ltp litmus kselftests"
+
 EXTRA_IMAGE_FEATURES_append = " package-management"
 PACKAGECONFIG_append_pn-qemu-native = " sdl"
 PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
