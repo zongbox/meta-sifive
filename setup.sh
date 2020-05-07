@@ -72,6 +72,9 @@ MACHINE ?= "${MACHINE}"
 #IMAGE_GEN_DEBUGFS = "1"
 #IMAGE_FSTYPES_DEBUGFS = "tar.gz"
 #EXTRA_IMAGE_FEATURES_append = " ssh-server-dropbear"
+
+HOSTTOOLS += " python"
+
 EXTRA_IMAGE_FEATURES_append = " package-management"
 PACKAGECONFIG_append_pn-qemu-native = " sdl"
 PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
