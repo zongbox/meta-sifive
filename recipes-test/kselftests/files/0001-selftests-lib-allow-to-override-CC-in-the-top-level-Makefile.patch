@@ -1,0 +1,29 @@
+From de33494250b64908a62861cdd09b71d9deb957d9 Mon Sep 17 00:00:00 2001
+From: Zong Li <zong.li@sifive.com>
+Date: Tue, 28 Apr 2020 03:25:21 -0700
+Subject: [PATCH] selftests: lib: allow to override CC in the top-level
+ Makefile
+
+Relax CC assignment to allow to override CC in the top-level Makefile.
+
+Signed-off-by: Denys Dmytriyenko <denys@ti.com>
+Signed-off-by: Zong Li <zong.li@sifive.com>
+---
+ tools/testing/selftests/lib.mk | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tools/testing/selftests/lib.mk b/tools/testing/selftests/lib.mk
+index 3ed0134..2ad8e86 100644
+--- a/tools/testing/selftests/lib.mk
++++ b/tools/testing/selftests/lib.mk
+@@ -1,6 +1,6 @@
+ # This mimics the top-level Makefile. We do it explicitly here so that this
+ # Makefile can operate with or without the kbuild infrastructure.
+-CC := $(CROSS_COMPILE)gcc
++CC ?= $(CROSS_COMPILE)gcc
+ 
+ ifeq (0,$(MAKELEVEL))
+     ifeq ($(OUTPUT),)
+-- 
+2.7.4
+
