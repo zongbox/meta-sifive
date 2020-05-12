@@ -47,11 +47,9 @@ PACKAGE_BEFORE_PN = " \
 	${PN}-bpf \
 	${PN}-breakpoints \
 	${PN}-capabilities \
-	${PN}-cgroup \
 	${PN}-clone3 \
 	${PN}-cpufreq \
 	${PN}-cpu-hotplug \
-	${PN}-dmabuf-heaps \
 	${PN}-drivers \
 	${PN}-efivarfs \
 	${PN}-exec \
@@ -59,40 +57,23 @@ PACKAGE_BEFORE_PN = " \
 	${PN}-firmware \
 	${PN}-ftrace \
 	${PN}-futex \
-	${PN}-gpio \
 	${PN}-ipc \
 	${PN}-ir \
 	${PN}-kcmp \
-	${PN}-kexec \
-	${PN}-kmod \
-	${PN}-kvm \
 	${PN}-lib \
 	${PN}-livepatch \
 	${PN}-lkdtm \
-	${PN}-locking \
-	${PN}-media_tests \
 	${PN}-membarrier \
-	${PN}-memfd \
 	${PN}-memory-hotplug \
 	${PN}-mount \
 	${PN}-mqueue \
 	${PN}-net \
-	${PN}-netfilter \
 	${PN}-networking \
-	${PN}-nsfs \
-	${PN}-ntb \
-	${PN}-openat2 \
-	${PN}-pidfd \
 	${PN}-powerpc \
-	${PN}-prctl \
 	${PN}-proc \
 	${PN}-pstore \
-	${PN}-ptp \
 	${PN}-ptrace \
-	${PN}-rcutorture \
-	${PN}-rseq \
 	${PN}-rtc \
-	${PN}-safesetid \
 	${PN}-seccomp \
 	${PN}-sigaltstack \
 	${PN}-size \
@@ -101,17 +82,11 @@ PACKAGE_BEFORE_PN = " \
 	${PN}-static-keys \
 	${PN}-sync \
 	${PN}-sysctl \
-	${PN}-tc-testing \
-	${PN}-timens \
 	${PN}-timers \
 	${PN}-tmpfs \
 	${PN}-tpm2 \
-	${PN}-uevent \
 	${PN}-user \
-	${PN}-vDSO \
 	${PN}-vm \
-	${PN}-watchdog \
-	${PN}-wireguard \
 	${PN}-x86 \
 	${PN}-zram \
 "
@@ -121,11 +96,9 @@ FILES_${PN}-arm64 = "${TARGET_TEST_DIR}/arm64"
 FILES_${PN}-bpf = "${TARGET_TEST_DIR}/bpf"
 FILES_${PN}-breakpoints = "${TARGET_TEST_DIR}/breakpoints"
 FILES_${PN}-capabilities = "${TARGET_TEST_DIR}/capabilities"
-FILES_${PN}-cgroup = "${TARGET_TEST_DIR}/cgroup"
 FILES_${PN}-clone3 = "${TARGET_TEST_DIR}/clone3"
 FILES_${PN}-cpufreq = "${TARGET_TEST_DIR}/cpufreq"
 FILES_${PN}-cpu-hotplug = "${TARGET_TEST_DIR}/cpu-hotplug"
-FILES_${PN}-dmabuf-heaps = "${TARGET_TEST_DIR}/dmabuf-heaps"
 FILES_${PN}-drivers = "${TARGET_TEST_DIR}/drivers"
 FILES_${PN}-efivarfs = "${TARGET_TEST_DIR}/efivarfs"
 FILES_${PN}-exec = "${TARGET_TEST_DIR}/exec"
@@ -133,40 +106,23 @@ FILES_${PN}-filesystems = "${TARGET_TEST_DIR}/filesystems"
 FILES_${PN}-firmware = "${TARGET_TEST_DIR}/firmware"
 FILES_${PN}-ftrace = "${TARGET_TEST_DIR}/ftrace"
 FILES_${PN}-futex = "${TARGET_TEST_DIR}/futex"
-FILES_${PN}-gpio = "${TARGET_TEST_DIR}/gpio"
 FILES_${PN}-ipc = "${TARGET_TEST_DIR}/ipc"
 FILES_${PN}-ir = "${TARGET_TEST_DIR}/ir"
 FILES_${PN}-kcmp = "${TARGET_TEST_DIR}/kcmp"
-FILES_${PN}-kexec = "${TARGET_TEST_DIR}/kexec"
-FILES_${PN}-kmod = "${TARGET_TEST_DIR}/kmod"
-FILES_${PN}-kvm = "${TARGET_TEST_DIR}/kvm"
 FILES_${PN}-lib = "${TARGET_TEST_DIR}/lib"
 FILES_${PN}-livepatch = "${TARGET_TEST_DIR}/livepatch"
 FILES_${PN}-lkdtm = "${TARGET_TEST_DIR}/lkdtm"
-FILES_${PN}-locking = "${TARGET_TEST_DIR}/locking"
-FILES_${PN}-media_tests = "${TARGET_TEST_DIR}/media_tests"
 FILES_${PN}-membarrier = "${TARGET_TEST_DIR}/membarrier"
-FILES_${PN}-memfd = "${TARGET_TEST_DIR}/memfd"
 FILES_${PN}-memory-hotplug = "${TARGET_TEST_DIR}/memory-hotplug"
 FILES_${PN}-mount = "${TARGET_TEST_DIR}/mount"
 FILES_${PN}-mqueue = "${TARGET_TEST_DIR}/mqueue"
 FILES_${PN}-net = "${TARGET_TEST_DIR}/net"
-FILES_${PN}-netfilter = "${TARGET_TEST_DIR}/netfilter"
 FILES_${PN}-networking = "${TARGET_TEST_DIR}/networking"
-FILES_${PN}-nsfs = "${TARGET_TEST_DIR}/nsfs"
-FILES_${PN}-ntb = "${TARGET_TEST_DIR}/ntb"
-FILES_${PN}-openat2 = "${TARGET_TEST_DIR}/openat2"
-FILES_${PN}-pidfd = "${TARGET_TEST_DIR}/pidfd"
 FILES_${PN}-powerpc = "${TARGET_TEST_DIR}/powerpc"
-FILES_${PN}-prctl = "${TARGET_TEST_DIR}/prctl"
 FILES_${PN}-proc = "${TARGET_TEST_DIR}/proc"
 FILES_${PN}-pstore = "${TARGET_TEST_DIR}/pstore"
-FILES_${PN}-ptp = "${TARGET_TEST_DIR}/ptp"
 FILES_${PN}-ptrace = "${TARGET_TEST_DIR}/ptrace"
-FILES_${PN}-rcutorture = "${TARGET_TEST_DIR}/rcutorture"
-FILES_${PN}-rseq = "${TARGET_TEST_DIR}/rseq"
 FILES_${PN}-rtc = "${TARGET_TEST_DIR}/rtc"
-FILES_${PN}-safesetid = "${TARGET_TEST_DIR}/safesetid"
 FILES_${PN}-seccomp = "${TARGET_TEST_DIR}/seccomp"
 FILES_${PN}-sigaltstack = "${TARGET_TEST_DIR}/sigaltstack"
 FILES_${PN}-size = "${TARGET_TEST_DIR}/size"
@@ -175,17 +131,11 @@ FILES_${PN}-splice = "${TARGET_TEST_DIR}/splice"
 FILES_${PN}-static-keys = "${TARGET_TEST_DIR}/static_keys"
 FILES_${PN}-sync = "${TARGET_TEST_DIR}/sync"
 FILES_${PN}-sysctl = "${TARGET_TEST_DIR}/sysctl"
-FILES_${PN}-tc-testing = "${TARGET_TEST_DIR}/tc-testing"
-FILES_${PN}-timens = "${TARGET_TEST_DIR}/timens"
 FILES_${PN}-timers = "${TARGET_TEST_DIR}/timers"
 FILES_${PN}-tmpfs = "${TARGET_TEST_DIR}/tmpfs"
 FILES_${PN}-tpm2 = "${TARGET_TEST_DIR}/tpm2"
-FILES_${PN}-uevent = "${TARGET_TEST_DIR}/uevent"
 FILES_${PN}-user = "${TARGET_TEST_DIR}/user"
-FILES_${PN}-vDSO = "${TARGET_TEST_DIR}/vDSO"
 FILES_${PN}-vm = "${TARGET_TEST_DIR}/vm"
-FILES_${PN}-watchdog = "${TARGET_TEST_DIR}/watchdog"
-FILES_${PN}-wireguard = "${TARGET_TEST_DIR}/wireguard"
 FILES_${PN}-x86 = "${TARGET_TEST_DIR}/x86"
 FILES_${PN}-zram = "${TARGET_TEST_DIR}/zram"
 FILES_${PN}-dbg += " ${TARGET_TEST_DIR}/*/.debug"
@@ -209,7 +159,6 @@ ALLOW_EMPTY_${PN}-net = "1"
 RDEPENDS_${PN}-cpu-hotplug += "bash"
 RDEPENDS_${PN}-efivarfs += "bash"
 RDEPENDS_${PN}-futex += "bash ncurses"
-RDEPENDS_${PN}-gpio += "bash"
 RDEPENDS_${PN}-memory-hotplug += "bash"
 RDEPENDS_${PN}-net += "bash"
 RDEPENDS_${PN}-vm += "bash sudo"
@@ -218,11 +167,9 @@ RDEPENDS_${PN} += "bash \
 	${PN}-android \
 	${PN}-bpf \
 	${PN}-capabilities \
-	${PN}-cgroup \
 	${PN}-clone3 \
 	${PN}-cpufreq \
 	${PN}-cpu-hotplug \
-	${PN}-dmabuf-heaps \
 	${PN}-drivers \
 	${PN}-efivarfs \
 	${PN}-exec \
@@ -230,38 +177,21 @@ RDEPENDS_${PN} += "bash \
 	${PN}-firmware \
 	${PN}-ftrace \
 	${PN}-futex \
-	${PN}-gpio \
 	${PN}-ir \
 	${PN}-kcmp \
-	${PN}-kexec \
-	${PN}-kmod \
-	${PN}-kvm \
 	${PN}-lib \
 	${PN}-livepatch \
 	${PN}-lkdtm \
-	${PN}-locking \
-	${PN}-media_tests \
 	${PN}-membarrier \
-	${PN}-memfd \
 	${PN}-memory-hotplug \
 	${PN}-mount \
 	${PN}-mqueue \
 	${PN}-net \
-	${PN}-netfilter \
 	${PN}-networking \
-	${PN}-nsfs \
-	${PN}-ntb \
-	${PN}-openat2 \
-	${PN}-pidfd \
-	${PN}-prctl \
 	${PN}-proc \
 	${PN}-pstore \
-	${PN}-ptp \
 	${PN}-ptrace \
-	${PN}-rcutorture \
-	${PN}-rseq \
 	${PN}-rtc \
-	${PN}-safesetid \
 	${PN}-seccomp \
 	${PN}-sigaltstack \
 	${PN}-size \
@@ -269,17 +199,11 @@ RDEPENDS_${PN} += "bash \
 	${PN}-static-keys \
 	${PN}-sync \
 	${PN}-sysctl \
-	${PN}-tc-testing \
-	${PN}-timens \
 	${PN}-timers \
 	${PN}-tmpfs \
 	${PN}-tpm2 \
-	${PN}-uevent \
 	${PN}-user \
-	${PN}-vDSO \
 	${PN}-vm \
-	${PN}-watchdog \
-	${PN}-wireguard \
 	${PN}-zram \
 "
 
